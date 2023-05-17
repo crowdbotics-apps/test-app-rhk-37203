@@ -1,43 +1,20 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a3f06355-bd86-408f-b1be-e9ddfd69dce3"
-        }}
-        style={styles.ImageBackground_579_2346}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a3f06355-bd86-408f-b1be-e9ddfd69dce3"
+    }} style={styles.ImageBackground_579_2346} />
       <View style={styles.View_579_2502}>
         <Text style={styles.Text_579_2502}>Subscribe</Text>
       </View>
@@ -47,13 +24,9 @@ export class Blank extends React.Component {
       <View style={styles.View_579_2519}>
         <Text style={styles.Text_579_2519}>Cancel subscription</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/446e00b3-4393-4dea-8753-9334d8eb2d4a"
-        }}
-        style={styles.ImageBackground_579_2503}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/446e00b3-4393-4dea-8753-9334d8eb2d4a"
+    }} style={styles.ImageBackground_579_2503} />
       <View style={styles.View_579_2506}>
         <View style={styles.View_579_2507} />
         <View style={styles.View_579_2508}>
@@ -74,26 +47,24 @@ export class Blank extends React.Component {
           <Text style={styles.Text_579_2515}>$7.99/month</Text>
         </View>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/25a57815-37a1-49d5-a04c-4a2f23caea64"
-        }}
-        style={styles.ImageBackground_579_2517}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/25a57815-37a1-49d5-a04c-4a2f23caea64"
+    }} style={styles.ImageBackground_579_2517} />
       <View style={styles.View_579_2518}>
         <Text style={styles.Text_579_2518}>Pay Subscription</Text>
       </View>
       <View style={styles.View_2806_3881}>
         <View style={styles.View_2806_3882} />
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(241, 241, 241, 1)" },
-  View_2: { height: hp("111%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(241, 241, 241, 1)"
+  },
+  View_2: {
+    height: hp("111%")
+  },
   ImageBackground_579_2346: {
     width: wp("87%"),
     height: hp("4%"),
@@ -340,12 +311,14 @@ const styles = StyleSheet.create({
     top: hp("3%"),
     backgroundColor: "rgba(0, 0, 0, 1)"
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);
